@@ -1,0 +1,21 @@
+.mat-card-simples{
+  max-width: 300px;
+  background-color: lightsalmon;
+  margin-top: 10px;
+}
+
+mat-form-field:first-child,
+mat-card {
+  margin-left: 10px;
+}
+
+.head {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.head:nth-child(2) {
+  font-size: 1.25em;
+  margin-bottom: 20px;
+  color: indianred;
+}

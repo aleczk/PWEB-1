@@ -1,0 +1,33 @@
+<p class="head"><br>{{titulo}}</p>
+<p class="head">Aluno: {{aluno}}<p>
+
+<mat-form-field appearance="fill">
+  <mat-label>Nome</mat-label>
+  <input matInput [(ngModel)]="usuario.nome" placeholder="Digite o nome">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Profissão</mat-label>
+  <input matInput [(ngModel)]="usuario.profissao" placeholder="Digite a profissão">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Data de Nascimento</mat-label>
+  <input matInput [(ngModel)]="usuario.nascimento" placeholder="Digite a data de nascimento">
+</mat-form-field>
+
+<button mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
+  <mat-icon>add</mat-icon>
+</button>
+
+<br>
+
+<mat-card *ngFor="let usuario of usuarios" class="mat-card-simples">
+  <mat-card-header>
+    <mat-card-title><mat-icon>person</mat-icon>{{usuario.nome}}</mat-card-title>
+    <mat-card-subtitle *ngIf="usuario.profissao">Profissão: {{usuario.profissao}} <br> Data de nascimento: {{usuario.nascimento}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <i>Nel mezzo del cammin di nostra vita <br>Mi ritrovai per una selva oscura <br>Che la diritta via era smarrita</i>
+  </mat-card-content>
+</mat-card>
